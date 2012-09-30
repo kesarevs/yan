@@ -3,7 +3,7 @@
 check_file() {
     
 file_path=$1
-    check_name=`echo "${file_path##*\/}" | grep -o "$search_query"`
+    check_name=`echo "${file_path##*\/}" | grep -io "$search_query"`
     if [[ ! $check_name ]] 
     then    
         return 0;
